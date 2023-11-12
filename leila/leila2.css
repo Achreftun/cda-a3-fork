@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Roboto:wght@300&display=swap');
+
+:root {
+    --color1: #00916e;
+    --color2: #feefe5;
+    --color3: #ffcf00;
+    --color4: #ee6123;
+    --color5: #067bc2;
+    --color6: #b80c09;
+    --text-color: #1f1f1f;
+    --bg-color: #000000ee;
+    --box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body {
+    background-color: var(--color1);
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    color: var(--text-color)
+}
+
+main{
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label {
+    font-family: 'Pixelify Sans', sans-serif
+}
+
+
+/* gérer les bordures */
+.container,
+.result,
+.calculatrice,
+.calculatrice input, 
+.calculatrice select, 
+.calculatrice button{
+    border-radius: 5px
+}
+
+.calculatrice select, .calculatrice input, .calculatrice button{
+    border: none
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--color3)
+}
+
+.container h2 {
+    margin: 0;
+    text-align: right
+}
+
+.result {
+    height: 50px;
+    max-height: fit-content;
+    background-color: var(--color2);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.result p {
+    margin: 0;
+    padding: 0; 
+    line-height: 20px;
+    word-break: break-word;
+}
+
+
+.calculatrice {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color4);
+    margin: 20px 0;
+    padding: 20px;
+}
+
+.calculatrice label {
+    margin-bottom: 5px;
+    text-align: left;
+    font-style: italic;
+    opacity: .7
+}
+
+.calculatrice select, .calculatrice button {
+    width: 40%;
+    height: 2rem;
+    margin: 20px auto;
+    font-size: 1.5rem;
+    cursor: pointer
+}
+
+.calculatrice select {
+    background-color: var(--color2);
+    text-align: center;
+}
+
+.calculatrice input {
+    height: 2rem;
+    padding: 5px 10px;
+    background-color: var(--color2);
+
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
+    text-align: right;
+    color: var(--text-color);
+
+    appearance : textfield;
+    -ms-progress-appearance: textfield;
+}
+
+.calculatrice input:focus{
+    outline: var(--text-color) solid 1px;
+}
+
+.calculatrice .buttons {
+    display: flex;
+}
+
+.calculatrice button{
+    background-color: var(--color5);
+    color: var(--color2);
+    font-weight: bold;
+    margin-bottom: 0;
+    transition: .3s
+}
+
+.calculatrice .btn-clear{
+    background-color: var(--color6);
+    font-family: 'Roboto', sans-serif;
+}
+
+.calculatrice button:hover{
+    opacity: .7
+}
+
+/* media queries */
+@media screen and (max-width: 430px) {
+    main{
+        width: 300px
+    }
+}
+
+@media screen and (min-width: 750px) {
+    main{
+        width: 600px
+    }
+}

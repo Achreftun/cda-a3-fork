@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice</title>
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./leila2.css">
+</head>
+<body>
+    <main>
+        <h1>Calculatrice</h1>
+
+        <div class="container">
+            <h2>Résultat</h2>
+            <!-- affichage du résultat  -->
+            <div id="result" class="result"></div>
+    
+            <!-- saisie et soumission des valeurs -->
+            <div class="calculatrice">
+                <label for="num1">Valeur 1</label>
+                <input type="number" name="num1" id="num1">
+                <select name="select-operator" id="select-operator">
+                    <option value="add" selected>+</option>
+                    <option value="substract">-</option>
+                    <option value="multiply">x</option>
+                    <option value="divide">÷</option>
+                </select>
+                <label for="num2">Valeur 2</label>
+                <input type="number" name="num2" id="num2">
+                <div class="buttons">
+                    <button id="btn-calculate">=</button>
+                    <button id="btn-clear" class="btn-clear">C</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./leila2.js"></script>
+</body>
+</html>
